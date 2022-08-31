@@ -8,35 +8,35 @@ temCvt = possui cambio CVT
 fonte: https:carrosnaweb.com.br 
 const nome | const preço | const marca | const velMax
 
-Para os dados, foram considerados a última versão fabricada do carro*/ 
+Para os dados, foram considerados a última versão fabricada do carro*/
 
 const carro1 = {
-    nome : "Duster",
-    preco : 133.990,
-    marca : "Renault",
-    velMax : "190km/h",
-    temCvt : true,
+    nome: "Duster",
+    preco: 133.990,
+    marca: "Renault",
+    velMax: "190km/h",
+    temCvt: true,
 }
 const carro2 = {
-    nome : "Tracker",
-    preco : 152.790,
-    marca : "Chevrolet",
-    velMax : "185km/h",
-    temCvt : false,
+    nome: "Tracker",
+    preco: 152.790,
+    marca: "Chevrolet",
+    velMax: "185km/h",
+    temCvt: false,
 }
 const carro3 = {
-    nome : "Creta",
-    preco : 165.290,
-    marca : "Hyundai",
-    velMax : "190km/h",
-    temCvt : false,
+    nome: "Creta",
+    preco: 165.290,
+    marca: "Hyundai",
+    velMax: "190km/h",
+    temCvt: false,
 }
 const carro4 = {
-    nome : "Corolla Cross",
-    preco : 190.590,
-    marca : "Toyota",
-    velMax : "195km/h", 
-    temCvt : true,
+    nome: "Corolla Cross",
+    preco: 190.590,
+    marca: "Toyota",
+    velMax: "195km/h",
+    temCvt: true,
 }
 
 // const mediaPreco = (carro1.preco+carro2.preco+carro3.preco+carro4.preco)/4; 
@@ -133,28 +133,28 @@ console.log(arrayCarros);
 
 // semana 6
 
-function imprimirObj(carro){
+function imprimirObj(carro) {
     let veiculo = `O carro ${carro.nome.toUpperCase()}, de marca ${carro.marca}, tem como velocidade máxima ${carro.velMax}, vale ${carro.preco + " mil"} e     
     possui CVT? ${carro.temCvt}`
     return veiculo
 }
 
-function carObj(carros){
-    for(const carro of carros){
+function carObj(carros) {
+    for (const carro of carros) {
         console.log(imprimirObj(carro));
         console.log("=".repeat(30))
-            }
+    }
 }
 
 // carObj(arrayCarros)
 
-function buscaCar(pesquisa, carros){
+function buscaCar(pesquisa, carros) {
     let carroFiltrado = carros.filter(carro => {
         return carro.nome.toUpperCase().includes(pesquisa.toUpperCase())
     })
-    if(carroFiltrado.length === 0){
-            alert("Item não encontrado")
-    }else{
+    if (carroFiltrado.length === 0) {
+        alert("Item não encontrado")
+    } else {
         return carroFiltrado
     }
 }
