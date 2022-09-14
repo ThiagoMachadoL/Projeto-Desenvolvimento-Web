@@ -16,6 +16,7 @@ const carro1 = {
     marca: "Renault",
     velMax: "190km/h",
     temCvt: true,
+    imgCar: "",
 }
 const carro2 = {
     nome: "Tracker",
@@ -23,6 +24,7 @@ const carro2 = {
     marca: "Chevrolet",
     velMax: "185km/h",
     temCvt: false,
+    imgCar: "",
 }
 const carro3 = {
     nome: "Creta",
@@ -30,6 +32,7 @@ const carro3 = {
     marca: "Hyundai",
     velMax: "190km/h",
     temCvt: false,
+    imgCar: "",
 }
 const carro4 = {
     nome: "Corolla Cross",
@@ -37,6 +40,7 @@ const carro4 = {
     marca: "Toyota",
     velMax: "195km/h",
     temCvt: true,
+    imgCar: "",
 }
 
 // const mediaPreco = (carro1.preco+carro2.preco+carro3.preco+carro4.preco)/4; 
