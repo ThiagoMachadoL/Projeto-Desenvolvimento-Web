@@ -1,0 +1,44 @@
+header {
+    background-color:rgb(77, 25, 166);
+    background-image: linear-gradient(to bottom,rgb(77, 25, 166),rgb(161, 149, 182));
+    color: white;
+    font-size: 250%;
+    width: 100%;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    background-color: rgb(65, 11, 158);
+    background-image: linear-gradient(to bottom right,rgb(103, 73, 154),rgb(157, 127, 208));
+    gap: 2vh;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+.carro {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(161, 149, 182);
+    background-image: linear-gradient(to bottom right,rgb(204, 181, 243),rgb(255, 255, 255));
+}
+img{
+    width: 55vh;
+    height: 28vh;
+}
+footer {
+    background-color:rgb(77, 25, 166);
+    background-image: linear-gradient(to top right,rgb(77, 25, 166),rgb(161, 149, 182));
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+    width: 100%;
+    text-align: left;
+    line-height: 40px
+}
+.site-footer{
+    color: black;
+    font-size: 110%;
+}
