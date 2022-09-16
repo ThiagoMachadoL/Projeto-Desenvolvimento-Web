@@ -6,24 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="javascript" href="script.js">
+    <script src="script.js">       window.onload = function() {
+
+        // create a couple of elements in an otherwise empty HTML page
+        var heading = document.createElement("h1");
+        var heading_text = document.createTextNode("Big Head!");
+        heading.appendChild(heading_text);
+        document.body.appendChild(heading);
+     }</script>
     <title>Qual o melhor SUV de 2022?</title>
 </head>
-
 <body>
     <header>
         <h1> Qual o melhor SUV Vendido no Brasil em 2022?</h1>
     </header>
     <main>
         <section class="button">
-            <input class="search-input" type="text" placeholder="Digite o carro desejado">
+            <input class="search-input" type="text" placeholder="Digite o carro desejado" >
             <button>
                 <input type="image" ; src="images/lupa.png" ; height="12" ; width="12">
             </button>
         </section>
         <section class="carro" id="Corolla Cross">
             <img src="images/car1-768x388.png">
-            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17698"><b>Corolla Cross XRX
+            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17698" target="_blank"><b>Corolla Cross XRX
                         Hybrid
                         1.8</b></a>
                 <ul>
@@ -37,7 +43,7 @@
         </section>
         <section class="carro" id="Creta">
             <img src="images/z1-3-768x576.png">
-            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=18624"><b>Creta Platinum 1.0
+            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=18624" target="_blank"><b>Creta Platinum 1.0
                         Turbo</b></a>
                 <ul>
                     <li>Preço: R$ 144.905</li>
@@ -50,7 +56,7 @@
         </section>
         <section class="carro" id="Duster">
             <img src="images/duster10-768x511.png">
-            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17665"><b>Duster Iconic 1.6
+            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17665" target="_blank"><b>Duster Iconic 1.6
                         AT</b></a>
                 <ul>
                     <li>Preço: R$ 109.627 </li>
@@ -61,9 +67,21 @@
             </figcaption>
 
         </section>
+        <section class="carro" id="HR-V">
+            <img src="images/honda-hr-v.png">
+            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=20098" target="_blank"><b>Honda HR-V Touring 1.5 Turbo 1.2</b></a>
+                <ul>
+                    <li>Preço: R$ 184.500</li>
+                    <li>Marca: Honda</li>
+                    <li>Velocidade Máxima: 198km/h</li>
+                    <li>Possui câmbio CVT?: Sim</li>
+                </ul>
+            </figcaption>
+
+        </section>
         <section class="carro" id="Tracker">
             <img src="images/z6-1-768x460.png">
-            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17999"><b>Tracker Premier
+            <figcaption> <a href="https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17999" target="_blank"><b>Tracker Premier
                         1.2</b></a>
                 <ul>
                     <li>Preço: R$ 141.658</li>
@@ -74,6 +92,7 @@
             </figcaption>
 
         </section>
+        
     </main>
     <footer>
         <em >Olá, eu sou Thiago Machado! Venha conhecer meus projetos em: <a class="site-footer" href="https://github.com/ThiagoMachadoL"> GITHUB.COM/THIAGOMACHADOL</a></em>
