@@ -42,6 +42,15 @@ const carro4 = {
     temCvt: true,
     imgCar: "",
 }
+const carro5 ={
+    nome: "Honda HRV",
+    preco: 184.500,
+    marca: "Honda",
+    velMax: "198km/h",
+    temCvt: true,
+    imgCar: "",
+}
+
 
 // const mediaPreco = (carro1.preco+carro2.preco+carro3.preco+carro4.preco)/4; 
 // console.log(mediaPreco);
@@ -69,6 +78,7 @@ arrayCarros.push(carro1)
 arrayCarros.push(carro2);
 arrayCarros.push(carro3);
 arrayCarros.push(carro4);
+arrayCarros.push(carro5);
 console.log(arrayCarros);
 
 // //semana 4
@@ -92,6 +102,11 @@ console.log(arrayCarros);
 //     alert(carro4.nome + " possui câmbio CVT;")
 // }else{
 //     alert(carro4.nome +  " não possui câmbio CVT;")
+// }
+// if (carro5.temCvt){
+//     alert(carro5.nome + " possui câmbio CVT;")
+// }else{
+//     alert(carro5.nome +  " não possui câmbio CVT;")
 // }
 
 
@@ -146,7 +161,7 @@ function imprimirObj(carro) {
 function carObj(carros) {
     for (const carro of carros) {
         console.log(imprimirObj(carro));
-        console.log("=".repeat(30))
+        // console.log("=".repeat(30))
     }
 }
 
@@ -163,6 +178,6 @@ function buscaCar(pesquisa, carros) {
     }
 }
 
-let ps = prompt("Digite o carro que você quer comprar 2022:")
-let carroFilter = buscaCar(ps, arrayCarros)
-carObj(carroFilter)
+// let ps = prompt("Digite o carro que você quer comprar 2022:")
+// let carroFilter = buscaCar(ps, arrayCarros)
+// carObj(carroFilter)

@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 header {
     background-color:rgb(77, 25, 166);
     background-image: linear-gradient(to bottom,rgb(77, 25, 166),rgb(161, 149, 182));
@@ -8,25 +12,27 @@ header {
 }
 
 main{
-    display: flex;
+    display: grid;
     background-color: rgb(65, 11, 158);
     background-image: linear-gradient(to bottom right,rgb(103, 73, 154),rgb(157, 127, 208));
-    gap: 2vh;
     width: 100%;
     align-items: center;
-    flex-direction: column;
+    justify-items: center;
+    gap: 15px;
 }
 
 .carro {
-    display: flex;
+    display: grid;
+    width: 55vh;
+    grid-template-columns: 1fr;
+    justify-items: center;
     align-items: center;
-    flex-direction: column;
     background-color: rgb(161, 149, 182);
     background-image: linear-gradient(to bottom right,rgb(204, 181, 243),rgb(255, 255, 255));
 }
 img{
     width: 55vh;
-    height: 28vh;
+    height: 28vh
 }
 footer {
     background-color:rgb(77, 25, 166);
