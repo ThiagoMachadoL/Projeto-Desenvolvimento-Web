@@ -10,45 +10,55 @@ const nome | const preço | const marca | const velMax
 
 Para os dados, foram considerados a última versão fabricada do carro*/
 
+
+
+
 const carro1 = {
-    nome: "Duster",
-    preco: 133.990,
-    marca: "Renault",
-    velMax: "190km/h",
-    temCvt: true,
-    imgCar: "",
-}
-const carro2 = {
-    nome: "Tracker",
-    preco: 152.790,
-    marca: "Chevrolet",
-    velMax: "185km/h",
-    temCvt: false,
-    imgCar: "",
-}
-const carro3 = {
-    nome: "Creta",
-    preco: 165.290,
-    marca: "Hyundai",
-    velMax: "190km/h",
-    temCvt: false,
-    imgCar: "",
-}
-const carro4 = {
     nome: "Corolla Cross",
     preco: 190.590,
     marca: "Toyota",
     velMax: "195km/h",
     temCvt: true,
-    imgCar: "",
+    img: "https://carros2022.com.br/wp-content/uploads/2021/07/car1-768x388.png",
+    link: "https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17698",
+
 }
-const carro5 ={
-    nome: "Honda HRV",
+const carro2 = {
+    nome: "Creta Platinum 1.0",
+    preco: 165.290,
+    marca: "Hyundai",
+    velMax: "190km/h",
+    temCvt: false,
+    img: "https://carros2022.com.br/wp-content/uploads/2021/02/z1-3-768x576.jpg",
+    link: "https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=18624",
+
+}
+const carro3 = {
+    nome: "Duster Iconic 1.6",
+    preco: 133.990,
+    marca: "Renault",
+    velMax: "190km/h",
+    temCvt: true,
+    img: "https://carros2022.com.br/wp-content/uploads/2021/04/duster10-768x511.jpg",
+    link: "https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17665",
+}
+const carro4 = {
+    nome: "Honda HR-V Touring 1.5 Turbo 1.2",
     preco: 184.500,
     marca: "Honda",
     velMax: "198km/h",
     temCvt: true,
-    imgCar: "",
+    img: "https://cdn.euroncap.com/media/68585/honda-hr-v.png?mode=crop&width=359&height=235",
+    link: "https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=20098" ,
+}
+const carro5 = {
+    nome: "Tracker Premier 1.2",
+    preco: 152.790,
+    marca: "Chevrolet",
+    velMax: "185km/h",
+    temCvt: false,
+    img: "https://carros2022.com.br/wp-content/uploads/2021/02/z6-1-768x460.jpg",
+    link: "https://www.carrosnaweb.com.br/fichadetalhe.asp?codigo=17999",
 }
 
 
@@ -73,13 +83,13 @@ const carro5 ={
 // // dos modelos apresentados no assíncrono.
 
 // //semana 3
-const arrayCarros = [];
+let arrayCarros = [];
 arrayCarros.push(carro1)
 arrayCarros.push(carro2);
 arrayCarros.push(carro3);
 arrayCarros.push(carro4);
 arrayCarros.push(carro5);
-console.log(arrayCarros);
+// console.log(arrayCarros);
 
 // //semana 4
 
@@ -158,25 +168,87 @@ function imprimirObj(carro) {
     return veiculo
 }
 
-function carObj(carros) {
-    for (const carro of carros) {
-        console.log(imprimirObj(carro));
-        // console.log("=".repeat(30))
-    }
-}
+// function carObj(carros) {
+//     for (const carro of carros) {
+//         // console.log(imprimirObj(carro));
+//         // console.log("=".repeat(30))
+//     }
+// }
 
 // carObj(arrayCarros)
 
-function buscaCar(pesquisa, carros) {
+function buscaCar(carros, pesquisa) {
     let carroFiltrado = carros.filter(carro => {
-        return carro.nome.toUpperCase().includes(pesquisa.toUpperCase())
+        return carro.nome.toUpperCase().includes(pesquisa.toUpperCase());
     })
     if (carroFiltrado.length === 0) {
-        alert("Item não encontrado")
     } else {
-        return carroFiltrado
+        return carroFiltrado;
+    }
+    let carroFiltrado2 = carros.filter(carro => {
+        return carro.marca.toUpperCase().includes(pesquisa.toUpperCase());
+    })
+    if (carroFiltrado2.length === 0) {
+    } else {
+        return carroFiltrado2;
+    }
+};
+
+function buscaCarro() {
+    let container;
+    const search = document.querySelector("#search-input").value;
+    if (!search) {
+        alert("Digite algo para que a busca aconteça");
+    } else {
+        const cars = buscaCar(arrayCarros, search);
+        console.log(cars);
+        container = `<section class="carro" >
+        <img src=${cars[0].img}>
+        <ul>
+            <li><a href=${cars[0].link}
+                    target="_blank"><b>${cars[0].nome}</b></a></li>
+            </br>
+            <li>Preço: ${cars[0].preco}</li>
+            <li>Marca: ${cars[0].marca}</li>
+            <li>Velocidade Máxima: ${cars[0].velMax}</li>
+            <li>Possui câmbio CVT?: ${cars[0].temCvt}</li>
+        </ul>
+
+    </section>`;
+        document.querySelector("#itemContainer").innerHTML = "";
+        document.querySelector("#itemContainer").innerHTML = container;
     }
 }
+
+// function buscarFilmes() {
+
+//     let container;
+ 
+//     const search = document.querySelector("#pesquisaFilmes").value;
+//     if (!search) {
+//        alert("Digite algo para que a busca aconteça");
+//     } else {
+//        const filmeSelecionado = arrayFilmes(filmesLongas, search);
+//        console.log(filmeSelecionado);
+ 
+//        container = <section class="itens">
+//        <img src="https://pa1.narvii.com/6474/bbdd8d50ca2ad412c704eb61fabaa68ac74c565b_hq.gif"
+//            alt="Gif Totoro fazendo dana do crescimento" class="gifStudioGhibli">
+//        <ul>
+//            <li><a href="https://www.netflix.com/br/title/70019062" target="_blank" class="linkImg">Nome:
+//                    ${filmeSelecionado[0].nome}</a></li>
+//            <li>Ano de Lancamento: ${filmeSelecionado[0].anoDeLancamento}</li>
+//            <li>Está disponível na Netflix? ${filmeSelecionado[0].disponivelNetflix}</li>
+//            <li>Duração do filme: ${filmeSelecionado[0].duracao}</li>
+//            <li>Elenco do filme: ${filmeSelecionado[0].elenco}</li>
+//        </ul>
+//    </section>;
+ 
+//        document.querySelector("#itensContainer").innerHTML = "";
+//        document.querySelector("#itensContainer").innerHTML = container;
+ 
+//     }
+//  }
 
 // let ps = prompt("Digite o carro que você quer comprar 2022:")
 // let carroFilter = buscaCar(ps, arrayCarros)
